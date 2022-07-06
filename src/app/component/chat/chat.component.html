@@ -1,6 +1,16 @@
 <h1>Mensajes</h1>
 <hr>
 
+<div id="chat-mensajes">
+  <li class="list-group-item"
+  *ngFor="let msg of mensajes">
+  <span
+    style="color: indigo; font-weight: bold;"
+  > {{msg.de}}:</span>
+  {{msg.cuerpo}}
+  </li>
+</div>
+<hr>
 <form (ngSubmit)="enviar()">
 <input type="text"
 [(ngModel)]="texto"
