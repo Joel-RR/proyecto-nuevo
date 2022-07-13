@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SocketIoConfig, SocketIoModule } from 'ngx-socket-io';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 const config: SocketIoConfig =
 {
@@ -15,7 +16,7 @@ import { ChatComponent } from './component/chat/chat.component';
 import { ListaUsuariosComponent } from './component/lista-usuarios/lista-usuarios.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MensajesComponent } from './pages/mensajes/mensajes.component';
-import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -36,3 +37,4 @@ import { AppRoutingModule } from './app-routing.module';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
