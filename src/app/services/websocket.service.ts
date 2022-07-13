@@ -29,7 +29,7 @@ export class WebsocketService {
 
 
   emit( evento: string, payload: any , callback?: Function){
-    console.log('emitiendo mensaje');
+    console.log('enviando mensaje');
     this.socket.emit(evento, payload, callback);
   }
 
