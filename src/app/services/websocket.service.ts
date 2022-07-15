@@ -38,26 +38,16 @@ export class WebsocketService {
     return this.socket.fromEvent( evento );
   }
 
-<<<<<<< HEAD
-  loginWS(nombre: string,color: string){
+  loginWS(nombre: string){
 
     return new Promise<void>( ( resolve, reject) => {
           //console.log('Configurando :', nombre);
-     this.emit('configurar-usuario',{nombre, color}, (resp:Response) =>{
-      //console.log(resp);
-
-      this.usuario = new Usuario(nombre, color);
-      this.guardarStorage();
-      resolve();
-=======
-  loginWS(nombre: String){
-
-    return new Promise( ( resolve, reject) => {
-          //console.log('Configurando :', nombre);
      this.emit('configurar-usuario',{nombre}, (resp:Response) =>{
       //console.log(resp);
-      resolve(Promise);
->>>>>>> d5072992bd1755d4e11c225d6c84e140038a8b09
+
+      this.usuario = new Usuario(nombre);
+      this.guardarStorage();
+      resolve();
      });
     }
      /*this.socket.emit('configurar-usuario', {nombre}, (resp: Response) =>
@@ -65,7 +55,6 @@ export class WebsocketService {
       console.log(resp);
      });*/
   )}
-<<<<<<< HEAD
 
   getUsuario(){
     return this.usuario;
@@ -81,8 +70,6 @@ export class WebsocketService {
       this.usuario = JSON.parse(localStorage.getItem('usuario')!);
     }
   }
-=======
->>>>>>> d5072992bd1755d4e11c225d6c84e140038a8b09
 
 }
 

@@ -10,7 +10,6 @@ import { WebsocketService } from 'src/app/services/websocket.service';
 export class LoginComponent implements OnInit {
 
   nombre = '';
-  color='';
   constructor(
     public wsService: WebsocketService,
     private router: Router
@@ -20,11 +19,7 @@ export class LoginComponent implements OnInit {
   }
 
   ingresar(){
-<<<<<<< HEAD
-    this.wsService.loginWS(this.nombre,this.color)
-=======
     this.wsService.loginWS(this.nombre)
->>>>>>> d5072992bd1755d4e11c225d6c84e140038a8b09
     .then(()=>{
       this.router.navigateByUrl('/mensajes');
     });
